@@ -1,20 +1,21 @@
 #!/bin/bash
 
 # Crear el archivo .nanorc
-#cat > ~/.nanorc <<- "EOF"
-cat > nanorc.txt <<- "EOF"
+cat > ~/.nanorc <<- "EOF"
 set linenumbers
 set tabsize 4
-set titlecolor brightwhite,lime
+set titlecolor brightwhite,green
 set functioncolor brightwhite
 set numbercolor brightwhite,cyan
-set statuscolor brightwhite,lime
+set statuscolor brightwhite,green
 set keycolor brightwhite,cyan
 EOF
 
 # Crear el script ctfscan
-#cat > /usr/bin/ctfscan <<- "EOF"
-cat > ctfscan.txt <<- "EOF"
+apt-get install golang-go -y
+go get -u github.com/liamg/furious
+
+cat > /usr/bin/ctfscan <<- "EOF"
 #!/bin/bash
 
 # Colores
@@ -73,8 +74,7 @@ fi
 echo
 EOF
 
-#chmod +x /usr/bin/ctfscan
-chmod +x ctfscan.txt
+chmod +x /usr/bin/ctfscan
 
 # Instalar xclip
 apt-get install xclip -y
@@ -87,8 +87,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 mkdir -p ~/.config/nvim/
 
-#cat > ~/.config/nvim/init.vim <<- "EOF"
-cat > init.vim.txt <<- "EOF"
+cat > ~/.config/nvim/init.vim <<- "EOF"
 set autoindent
 set tabstop=4
 set shiftwidth=4
