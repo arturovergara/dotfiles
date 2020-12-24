@@ -64,13 +64,7 @@ echo -e "${greenColor}[+] Open ports: $furious${endColor}\n"
 
 # Realiza un escaneo avanzado con los puertos encontrados, a traves de nmap
 echo -e "${blueColor}[!] Nmap Output:${endColor}\n"
-
-if [-z $archivo] ; then
-        nmap -sC -sV -Pn -T4 -n -p -oN $archivo $furious $1 | tail -n+5 | head -n-3
-	else
-	        nmap -sC -sV -Pn -T4 -n -p $furious $1 | tail -n+5 | head -n-3
-fi
-
+nmap -sC -sV -Pn -T4 -n -p $furious $1 | tail -n+5 | head -n-3
 echo
 EOF
 
@@ -145,3 +139,19 @@ function! OpenTerminal()
 endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
 EOF
+
+# Configuraciones de Mate-Terminal
+dconf write /org/mate/terminal/profiles/default/use-theme-colors false
+dconf write /org/mate/terminal/profiles/default/background-color "'#000000000000'"
+dconf write /org/mate/terminal/profiles/default/background-type "'transparent'"
+dconf write /org/mate/terminal/profiles/default/background-darkness 0.9
+dconf write /org/mate/terminal/profiles/default/foreground-color "'#FFFFFFFFFFFF'"
+dconf write /org/mate/terminal/profiles/default/palette "'#000000000000:#AAAA00000000:#0000AAAA0000:#AAAA55540000:#00000000AAAA:#AAAA0000AAAA:#0000AAAAAAAA:#AAAAAAAAAAAA:#555455545554:#FFFF55545554:#5554FFFF5554:#FFFFFFFF5554:#55545554FFFF:#FFFF5554FFFF:#5554FFFFFFFF:#FFFFFFFFFFFF'"
+dconf write /org/mate/terminal/profiles/default/use-system-font false
+dconf write /org/mate/terminal/profiles/default/font "'Monospace 11'"
+dconf write /org/mate/terminal/profiles/default/allow-bold true
+
+# Configuraciones de Mate-Panel
+pkill plank
+dconf write /org/mate/panel/general/default-layout "'redmond'"
+mate-panel --reset
