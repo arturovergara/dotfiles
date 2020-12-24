@@ -157,3 +157,12 @@ dconf write /org/mate/terminal/profiles/default/allow-bold true
 pkill plank
 dconf write /org/mate/panel/general/default-layout "'redmond'"
 mate-panel --reset
+
+# Modificar archivo .bashrc
+sed -i 's/32m/92m/' ~/.bashrc
+sed -i 's/34m/96m/' ~/.bashrc
+echo 'alias smbserver="python /opt/impacket/examples/smbserver.py a $(pwd)"' >> ~/.bashrc
+echo 'alias cls="clear"'
+echo "alias cppwd=\"pwd |  awk '{print \\\"\\\\\\\"\\\"\\\$0\\\"\\\\\\\"\\\"}' | tr -d '\n' | xclip -selection c\"" >> ~/.bashrc
+
+exit
