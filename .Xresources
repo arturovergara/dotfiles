@@ -38,10 +38,10 @@
 *.color15: #fdf6e3
 
 !! URxvt Appearance
-*.font: xft:Iosevka:style=Regular:size=13
-*.boldFont: xft:Iosevka:style=Bold:size=13
-*.italicFont: xft:Iosevka:style=Italic:size=13
-*.boldItalicFont: xft:Iosevka:style=Bold Italic:size=13
+*.font: xft:CaskaydiaCove Nerd Font Mono:style=Regular:size=13
+*.boldFont: xft:CaskaydiaCove Nerd Font Mono:style=Bold:size=13
+*.italicFont: xft:CaskaydiaCove Nerd Font Mono:style=Italic:size=13
+*.boldItalicFont: xft:CaskaydiaCove Nerd Font Mono:style=Bold Italic:size=13
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 92x24
@@ -54,3 +54,9 @@ URxvt.scrollBar_right: false
 URxvt.urgentOnBell: true
 URxvt.depth: 24
 URxvt.iso14755: false
+
+!! Copy/Paste
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.keysym.Control-Meta-c: builtin-string:
+URxvt.keysym.Control-Meta-v: builtin-string:
