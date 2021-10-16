@@ -138,3 +138,6 @@ LWin & w::Send !{f4}
 
 ; Abre el Edge
 LWin & f::Run, msedge.exe, "C:\Program Files (x86)\Microsoft\Edge\Application
+
+; Abre el Windows Terminal
+LWin & Enter::Run "%LOCALAPPDATA%\Microsoft\WindowsApps\wt.exe"
