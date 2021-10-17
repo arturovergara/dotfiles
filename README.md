@@ -4,6 +4,11 @@ This repository contains most of my personal configuration files for both Linux 
 
 ### ❖ Screenshots
 
+<div align="center">
+   <img src="https://raw.githubusercontent.com/ArturoVergara/dotfiles/main/screenshots/vim.png">
+   <img src="https://raw.githubusercontent.com/ArturoVergara/dotfiles/main/screenshots/rofi.png">
+</div>
+
 ### ❖ Keybinds
 
    The list of the most important shortcuts.
