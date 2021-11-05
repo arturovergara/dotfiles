@@ -1,0 +1,68 @@
+# Tema
+colors:
+  primary:
+    background: '#1c1c1c'
+    foreground: '#d0d0d0'
+  normal:
+    black:   '#444444'
+    red:     '#fa3935'
+    green:   '#afd701'
+    yellow:  '#d9a400'
+    blue:    '#2ca2f5'
+    magenta: '#8086e8'
+    cyan:    '#5f8787'
+    white:   '#c6c6c6'
+  bright:
+    black:   '#303030'
+    red:     '#d12f2c'
+    green:   '#819400'
+    yellow:  '#b08500'
+    blue:    '#2587cc'
+    magenta: '#696ebf'
+    cyan:    '#00afaf'
+    white:   '#f1f1f1'
+
+# Fuentes
+font:
+  normal:
+    family: CaskaydiaCove Nerd Font Mono
+    style: Regular
+
+  bold:
+    family: CaskaydiaCove Nerd Font Mono
+    style: Bold
+
+  italic:
+    family: CaskaydiaCove Nerd Font Mono
+    style: Italic
+
+  bold_italic:
+    family: CaskaydiaCove Nerd Font Mono
+    style: Bold Italic
+
+  size: 13
+
+
+window:
+  # Window dimensions (changes require restart)
+  #
+  # Specified in number of columns/lines, not pixels.
+  # If both are `0`, this setting is ignored.
+  dimensions:
+    columns: 0
+    lines: 0
+
+  # Window padding (changes require restart)
+  #
+  # Blank space added around the window in pixels. This padding is not scaled
+  # by DPI and the specified value is always added at both opposing sides.
+  padding:
+    x: 20
+    y: 20
+
+  # Window decorations
+  #
+  # Values for `decorations`:
+  #     - full: Borders and title bar
+  #     - none: Neither borders nor title bar
+  decorations: full
