@@ -11,7 +11,7 @@ set mouse=a
 syntax enable
 "autocmd VimEnter,VimLeave * silent !tmux set status
 
-" Ajustes para el plugin lightline
+" Prev settings for Lightline plugin
 set laststatus=2
 set noshowmode
 set showtabline=2
@@ -24,13 +24,24 @@ nnoremap <Leader>O O<Esc>0"_D
 
 call plug#begin('~/.vim/plugged')
 
+" Theme
 Plug 'nlknguyen/papercolor-theme'
+
+" Lightline
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
+
+" CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" NERDTree
 Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+
+" Useful stuff
 Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-surround'
+Plug 'SirVer/ultisnips'
 
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -45,23 +56,22 @@ Plug 'lepture/vim-jinja'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 
-"Colores para CSS
+" CSS Colors
 Plug 'ap/vim-css-color'
-
-" Iconos para el NerdTree
-Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
-" Setear el Tema
+" Set theme
 colorscheme PaperColor
 
-" Abrir NerdTree con ALT + SHIFT + Q
+" Open NERDTree with ALT + SHIFT + Q
 map <A-Q> :NERDTreeToggle<CR>
+
+" UltiSnips Settings
+let g:UltiSnipsEditSplit = "vertical"
 
 " Lightline Settings
 let g:lightline#bufferline#show_number = 2
-" let g:lightline#bufferline#number_separator = ' '
 let g:lightline#bufferline#unnamed = '[No Name]'
 let g:lightline#bufferline#enable_devicons = 1
 let g:lightline#bufferline#clickable = 1
