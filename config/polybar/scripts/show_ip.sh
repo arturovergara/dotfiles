@@ -27,7 +27,7 @@ main()
 	elif [[ $interface =~ "tun" ]]; then
 		icon="%{F#9FEF00}"
 	else
-		icon="%{F#2CA2F5}"
+		icon=""
 	fi
 
 	# Get the IPv4 address

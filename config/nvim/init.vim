@@ -22,6 +22,9 @@ let mapleader = ","
 nnoremap <Leader>o o<Esc>0"_D
 nnoremap <Leader>O O<Esc>0"_D
 
+" Python stuff
+autocmd FileType python set colorcolumn=79
+
 call plug#begin('~/.vim/plugged')
 
 " Theme
@@ -41,7 +44,7 @@ Plug 'ryanoasis/vim-devicons'
 " Useful stuff
 Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-surround'
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -50,6 +53,7 @@ Plug 'junegunn/fzf.vim'
 " Syntax Python
 Plug 'vim-syntastic/syntastic'
 Plug 'vim-python/python-syntax'
+Plug 'Yggdroot/indentLine'
 Plug 'lepture/vim-jinja'
 
 " Syntax JS & React
@@ -68,7 +72,7 @@ colorscheme PaperColor
 map <A-Q> :NERDTreeToggle<CR>
 
 " UltiSnips Settings
-let g:UltiSnipsEditSplit = "vertical"
+" let g:UltiSnipsEditSplit = "vertical"
 
 " Lightline Settings
 let g:lightline#bufferline#show_number = 2
@@ -114,6 +118,8 @@ nmap <Leader>d6 <Plug>lightline#bufferline#delete(6)
 nmap <Leader>d7 <Plug>lightline#bufferline#delete(7)
 nmap <Leader>d8 <Plug>lightline#bufferline#delete(8)
 nmap <Leader>d9 <Plug>lightline#bufferline#delete(9)
+nmap <Leader>dd :bd<CR>
+nmap <Leader>dw :bw<CR>
 
 " Syntastic Settings
 let g:syntastic_python_python_exec = 'python3'
@@ -137,6 +143,7 @@ let g:NERDDefaultAlign = 'left'
 
 " Set a language to use its alternate delimiters by default
 let g:NERDAltDelims_java = 1
+let g:NERDAltDelims_python = 1
 
 " Add your own custom formats or override the defaults
 let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }

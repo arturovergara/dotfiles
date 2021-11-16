@@ -1,0 +1,42 @@
+[
+	{
+		"src": ".alacritty.yml",
+		"dst": "config/alacritty/.alacritty.yml",
+		"recursive": false
+	},
+	{
+		"src": ".config/bspwm/bspwmrc",
+		"dst": "config/bspwm/bspwmrc",
+		"recursive": false
+	},
+	{
+		"src": ".config/nvim/",
+		"dst": "config/nvim/",
+		"recursive": true
+	},
+	{
+		"src": ".config/polybar/",
+		"dst": "config/polybar/",
+		"recursive": true
+	},
+	{
+		"src": ".config/rofi/Xtrem.rasi",
+		"dst": "config/rofi/Xtrem.rasi",
+		"recursive": false
+	},
+	{
+		"src": ".config/sxhkd/sxhkdrc",
+		"dst": "config/sxhkd/sxhkdrc",
+		"recursive": false
+	},
+	{
+		"src": ".tmux.conf",
+		"dst": "config/tmux/.tmux.conf",
+		"recursive": false
+	},
+	{
+		"src": ".Xresources",
+		"dst": "config/urxvt/.Xresources",
+		"recursive": false
+	}
+]
