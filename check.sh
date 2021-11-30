@@ -26,7 +26,8 @@ EOF
 cleanup()
 {
 	trap - SIGINT SIGTERM ERR EXIT
-	# script cleanup here
+
+	# Script cleanup here
 }
 
 setup_colors()
@@ -38,22 +39,27 @@ setup_colors()
 	fi
 }
 
-msg()
+print_status()
 {
-	echo >&2 -e "${1-}"
+	echo >&2 -e "${YELLOW}[!]${NOFORMAT} ${1-}"
+}
+
+print_success()
+{
+	echo >&2 -e "${GREEN}[+]${NOFORMAT} ${1-}"
 }
 
 die()
 {
 	local msg=$1
-	local code=${2-1} # default exit status 1
-	msg "$msg"
+	local code=${2-1} # Default exit status 1
+	echo >&2 -e "${RED}[-]${NOFORMAT} ${1-}"
 	exit "$code"
 }
 
 parse_params()
 {
-	# default values of variables set from params
+	# Default values of variables set from params
 	flag=0
 	param=''
 
@@ -102,6 +108,10 @@ main()
 {
 	# parse_params "$@"
 	setup_colors
+
+	print_status "Probando esta funcion"
+	print_success "Buenas buenas"
+	die "Error al mimir"
 
 	# Iterate throught JSON file using jq
 	jq -c '.[]' files.json | while read item; do
