@@ -25,6 +25,11 @@ nnoremap <Leader>O O<Esc>0"_D
 " Python stuff
 autocmd FileType python set colorcolumn=79
 
+" React stuff
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascriptreact setlocal shiftwidth=2 tabstop=2
+
+
 call plug#begin('~/.vim/plugged')
 
 " Theme
@@ -330,6 +335,5 @@ let g:coc_global_extensions = [
     \ 'coc-html',
     \ 'coc-css',
     \ 'coc-phpls',
-    \ 'coc-python',
 	\ 'coc-diagnostic'
     \]
