@@ -1,6 +1,9 @@
 " UltiSnips Settings
 " let g:UltiSnipsEditSplit = "vertical"
 
+" CloseTag Settings
+let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx'
+
 " Lightline Settings
 let g:lightline#bufferline#show_number = 2
 let g:lightline#bufferline#unnamed = '[No Name]'
@@ -14,7 +17,7 @@ let g:lightline = {
       \ },
       \ 'tabline': {
       \   'left': [ ['buffers'] ],
-      \   'right': [ ['close'] ]
+      \   'right': []
       \ },
       \ 'component_expand': {
       \   'buffers': 'lightline#bufferline#buffers'
@@ -29,8 +32,11 @@ let g:lightline = {
 let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_python_checkers = ['python']
 
-" Syntax Color Python
+" Syntax Color Python Settings
 let g:python_highlight_all = 1
+
+" Markdown Live Preview Settings
+let g:mkdp_open_to_the_world = 1
 
 " NERDCommenter Settings
 " Create default mappings

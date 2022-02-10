@@ -14,9 +14,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 
-" Useful stuff
+" Typing stuff
 Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-surround'
+Plug 'alvan/vim-closetag'
 " Plug 'SirVer/ultisnips'
 
 " FZF
@@ -38,5 +39,8 @@ Plug 'ap/vim-css-color'
 
 " Docker & Devops
 Plug 'ekalinin/Dockerfile.vim'
+
+" Markdown
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 call plug#end()
