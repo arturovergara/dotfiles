@@ -1,5 +1,11 @@
 " UltiSnips Settings
-" let g:UltiSnipsEditSplit = "vertical"
+" let g:UltiSnipsSnippetDirectories = [$HOME.'/.config/nvim/snippets']
+let g:UltiSnipsSnippetDirectories = ["UltiSnips", "custom_snippets"]
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsListSnippets = "<C-_>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<S-tab>"
+let g:UltiSnipsEditSplit = "vertical"
 
 " CloseTag Settings
 let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx'

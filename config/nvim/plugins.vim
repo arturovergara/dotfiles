@@ -18,7 +18,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
-" Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
