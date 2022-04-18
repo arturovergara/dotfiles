@@ -4,9 +4,9 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 xsetroot -cursor_name left_ptr
 vmware-user-suid-wrapper &
-xrdb -load /home/xtrem/.Xresources &
+# xrdb -load /home/xtrem/.Xresources &
 feh --bg-fill /home/xtrem/Pictures/forest.png &
-/home/xtrem/.config/polybar/launch.sh --xtrem &
+/home/xtrem/.config/polybar/launch.sh &
 
 bspc config pointer_modifier mod1
 
@@ -24,4 +24,4 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-bspc rule -a burp-StartBurp: state=floating
+# bspc rule -a burp-StartBurp: state=floating
