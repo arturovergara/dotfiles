@@ -65,7 +65,7 @@ zstyle ':vcs_info:git:*' formats ' %b'
 
 branch_info()
 {
-	[ $vcs_info_msg_0_ ] && echo "[%B%F{14}$(basename $vcs_info_msg_0_)%b%F{reset}]"
+	[ $vcs_info_msg_0_ ] && echo " on %B%F{14}$(basename $vcs_info_msg_0_)%b%F{reset}"
 }
 
 # configure `time` format
@@ -84,7 +84,7 @@ VIRTUAL_ENV_DISABLE_PROMPT=1
 
 venv_info()
 {
-	[ $VIRTUAL_ENV ] && echo "[%B%F{#FFFF00} $(basename $VIRTUAL_ENV)%b%F{reset}]"
+	[ $VIRTUAL_ENV ] && echo "(%B%F{#FFFF00} $(basename $VIRTUAL_ENV)%b%F{reset})"
 }
 
 # set a fancy prompt (non-color, unless we know we "want" color)
@@ -114,7 +114,8 @@ configure_prompt() {
     case "$PROMPT_ALTERNATIVE" in
         twoline)
             # PROMPT=$'%F{reset}┌──${debian_chroot:+($debian_chroot)─}${VIRTUAL_ENV:+[$(basename $VIRTUAL_ENV)]─}(%B%F{%(#.red.#afd701)}%n$prompt_symbol%m%b%F{reset})-[%B%F{blue}%(6~.%-1~/…/%4~.%5~)%b%F{reset}]\n└─%B%(#.%F{red}#.%F{#afd701}$)%b%F{reset} '
-			PROMPT=$'%F{reset}┌──${debian_chroot:+($debian_chroot)─}$(venv_info)(%B%F{%(#.red.#afd701)}%n$prompt_symbol%m%b%F{reset})-[%B%F{blue}%(6~.%-1~/…/%4~.%5~)%b%F{reset}]$(branch_info)\n└─%B%(#.%F{red}#.%F{#afd701}$)%b%F{reset} '
+			# PROMPT=$'%F{reset}┌──${debian_chroot:+($debian_chroot)─}$(venv_info)(%B%F{%(#.red.#afd701)}%n$prompt_symbol%m%b%F{reset})-[%B%F{blue}%(6~.%-1~/…/%4~.%5~)%b%F{reset}]$(branch_info)\n└─%B%(#.%F{red}#.%F{#afd701}$)%b%F{reset} '
+			PROMPT=$'%F{reset}┌──${debian_chroot:+($debian_chroot)─}$(venv_info)%B%F{blue}   %(6~.%-1~/…/%4~.%5~)%b%F{reset}$(branch_info)\n└─ %B%(#.%F{red}#.%F{#afd701}λ)%b%F{reset} '
             RPROMPT=$'%(?.. %? %F{red}%B⨯%b%F{reset})%(1j. %j %F{yellow}%B⚙%b%F{reset}.)'
             ;;
         oneline)
