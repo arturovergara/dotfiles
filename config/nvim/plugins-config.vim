@@ -241,5 +241,9 @@ let g:coc_global_extensions = [
     \ 'coc-css',
     \ 'coc-phpls',
 	\ 'coc-pyright',
-	\ 'coc-diagnostic'
+	\ 'coc-diagnostic',
+	\ 'coc-htmldjango',
+	\ 'coc-emmet',
+	\ 'coc-eslint',
+	\ 'coc-prettier'
     \]

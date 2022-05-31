@@ -29,7 +29,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'vim-python/python-syntax'
 Plug 'Yggdroot/indentLine'
-Plug 'lepture/vim-jinja'
+Plug 'ArturoVergara/vim-jinja'
 
 " Syntax JS & React
 Plug 'yuezk/vim-js'

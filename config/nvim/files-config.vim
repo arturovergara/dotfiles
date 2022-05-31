@@ -1,8 +1,10 @@
-" CSS stuff
+" HTML & CSS stuff
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType css setlocal shiftwidth=2 tabstop=2 expandtab
 
 " Python stuff
-autocmd FileType python set colorcolumn=79
+autocmd FileType python set colorcolumn=90
+autocmd FileType python setlocal shiftwidth=4 tabstop=4 expandtab
 
 " React stuff
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab
