@@ -1,47 +1,61 @@
 call plug#begin('~/.vim/plugged')
-
 " Theme
 Plug 'nlknguyen/papercolor-theme'
+Plug 'rafamadriz/neon'
+Plug 'olivercederborg/poimandres.nvim'
 
-" Lightline
-Plug 'itchyny/lightline.vim'
-Plug 'mengelbrecht/lightline-bufferline'
+" NerdCommenter
+Plug 'preservim/nerdcommenter'
 
-" CoC
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Markdown Preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
-" NERDTree
-Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
+
+" # Lua Plugins #
+
+" LSP Config
+Plug 'neovim/nvim-lspconfig'
+
+" Nvim Treesitter for Syntax Color
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" Telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+" Tree
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
+
+" Lualine
+Plug 'nvim-lualine/lualine.nvim'
+
+" Navbar
+Plug 'romgrk/barbar.nvim'
+
+" Autocomplete
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+
+" Linter and formatter
+Plug 'dense-analysis/ale'
+
+" For vsnip users.
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
+" Indent lines
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Typing stuff
-Plug 'preservim/nerdcommenter'
-Plug 'tpope/vim-surround'
-Plug 'alvan/vim-closetag'
-Plug 'jiangmiao/auto-pairs'
-" Plug 'SirVer/ultisnips'
+Plug 'windwp/nvim-autopairs'
 
-" FZF
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Hex colors
+Plug 'norcalli/nvim-colorizer.lua'
 
-" Syntax Python
-Plug 'vim-syntastic/syntastic'
-Plug 'vim-python/python-syntax'
-Plug 'Yggdroot/indentLine'
-Plug 'ArturoVergara/vim-jinja'
-
-" Syntax JS & React
-Plug 'yuezk/vim-js'
-Plug 'maxmellon/vim-jsx-pretty'
-
-" CSS Colors
-Plug 'ap/vim-css-color'
-
-" Docker & Devops
-Plug 'ekalinin/Dockerfile.vim'
-
-" Markdown
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 call plug#end()
